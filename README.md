@@ -121,6 +121,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
+  Lastig:
+  - Een begin maken.
   - Carousel maken.
   - Tekst overlappen op images.
   - Alles op de juiste positie zetten.
