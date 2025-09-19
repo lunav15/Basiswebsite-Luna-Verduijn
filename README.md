@@ -104,11 +104,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
-
+- Hashtag staat op zichelf bij H3.
+- Classes weg en tijden CSS pas toevoegen waar nodig.
+- Er is maar één h1 per pagina, derest veranderen naar h2.
+- Zo min mogelijk classes en div.
+- Geen nav bij de foot.
 </details>
 
 
