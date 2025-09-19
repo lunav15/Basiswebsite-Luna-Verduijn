@@ -247,4 +247,16 @@ section:nth-of-type(6) h5 {
 	font-size: 1em;
 }
 
+section:nth-of-type(6) article div {
+	position: absolute;
+	z-index: 1;
+	top: 860%;
+	text-align: left;
+}
+
+section:nth-of-type(7) {
+	background-color: #295011;
+	padding: 1em;
+}
+
 
