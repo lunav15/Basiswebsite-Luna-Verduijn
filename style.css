@@ -1,8 +1,14 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+
 }
 
 
@@ -14,9 +20,13 @@
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
-	/* startje */
-	--color-text:#111;
-	--color-background:#000000;
+	--hashtag: #FFDD00;
+	--tekstboven: white;
+	--h3tekststijl: "Open Sans", sans-serif;
+	--h4tekstsstijl: "Open Sans", sans-serif;
+	--h1h2tekstijl: "Bebas Neue", sans-serif;
+	--ptekstijl: "Gentium Plus", serif;
+
 }
 
 
@@ -27,125 +37,235 @@
 /* JOUW STYLING */
 /****************/
 
-body {
-	background-color: #000000;
+
+/*********************/
+/* ANIMATIE */
+/*********************/
+
+h2 {
+	transition-duration: 1.5s;
+	transition-delay: .5s;
+	opacity: 0;
+	transform: translateX(3em);
 }
 
-button {   
-	display: block;              
-	width: 88%;                  
-	max-width: 800px;            
-	margin: 20px auto;          
-	padding: 3%;               
-	font-size: 24px;        
-	font-weight: bold;      
-	text-align: center;       
-	border: none;              
-	border-radius: 3%;          
-	font-weight: 600;
-	font-family: "Source Sans 3", sans-serif;
-	font-size: 20px;
-	background-color: #18864b;   
-	color: #FFDD00;   	
-
+h2.inbeeld {
+	opacity: 1;
+	transform: translateX(0);
 }
 
-header ul {
-	display: flex;
-	justify-content: center;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	gap: 1%;
-}
-
-header ul img {
-	width: 40px;
-	height: 40px;
-}
-
-.logo {
-	display: flex;                 
-	justify-content: center;       
-}
-
-section:nth-of-type(1) img {
-	margin-top: 4em;
+section img {
+	transition-duration: 1.5s;
+	transition-delay: .5s;
+	opacity: 0;
 
 }
 
-section:nth-of-type(1) h3 {
-	color: white;
-	position: absolute;
-	z-index: 1;
-	top: 73%;
-	font-family: "Open Sans", sans-serif;
-	padding-right: 12em;
+section img.inbeeld {
+	opacity: 1;
+	transform: translateX(0);
 }
 
-section:nth-of-type(1) h2 {
-	color: #FFDD00;
-	position: absolute;
-	z-index: 2;
-	top: 75%;
-	font-family: "Open Sans", sans-serif;
-	font-size: 3em;
+/*********************/
+/* SECTION 1 */
+/*********************/
+
+section:nth-of-type(1) {
+	background-image: url("./image/achtergrond1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 60%;
+	margin-bottom: 2em;
 }
 
-section:nth-of-type(1) h2 h3 {
-	display: flex;
-	align-items: center;  
-	justify-content: center;
+@media(min-width: 800px) {
+	section:nth-of-type(1) {
+		margin-top: 8em;
+		background-size: 240%;
+		background-position: 50% 70%;
+	}
 }
 
 section:nth-of-type(1) h1 {
-	font-family: "Bebas Neue", sans-serif;
-	color:white;
-	font-size: 4em;
+	font-family: var(--h1h2tekstijl);
+	color: var(--tekstboven);
+	font-size: 4.2em;
 	font-weight: 200;
-	position: absolute;
-	z-index: 2;
-	top: 80%;
-	padding-right: 2em;
+	text-align: center;
+	padding-right: 20%;
+	margin-top: 1.5em;
+	line-height: 0.9em;
+	transition-duration: 1.5s;
+	transition-delay: .5s;
+	opacity: 0;
+	transform: translateX(3em);
 }
 
+@media(min-width: 800px) {
+	section:nth-of-type(1) h1 {
+		padding-right: 40%;
+	}
+}
+
+section:nth-of-type(1) h1.inbeeld {
+	opacity: 1;
+	transform: translateX(0);
+}
 
 h1 div {
-	color:#FFDD00;
+	color: var(--hashtag);
+	width: 85%;
+}
+
+section:nth-of-type(1) h3 {
+	color: var(--tekstboven);
+	font-family: var(--h3tekststijl);
+	width: 50%;
+	font-size: 1.1em;
+	margin-top: 5.8em;
+
+}
+
+@media(min-width: 800px) {
+	section:nth-of-type(1) h3 {
+		width: 20%;
+	}
+}
+
+section:nth-of-type(1) h4 {
+	color: var(--hashtag);
+	font-family: var(--h4tekstsstijl);
+	font-size: 3em;
+	font-weight: 700;
+	margin-top: 3em;
+}
+
+section:nth-of-type(1) .hashtag {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	gap: 1em;
+	margin-left: 1.5em;
+	height: 1em;
+	width: 70%;
+}
+
+@media(min-width: 800px) {
+	.hashtag {
+		padding-left: 5em;
+	}
 }
 
 section:nth-of-type(1) p {
-	font-family: "Gentium Plus", serif;
-	color: white;
-	position: absolute;
-	z-index: 2;
-	top: 120%;
+	font-family: var(--ptekstijl);
+	color: var(--tekstboven);
+	margin-left: 2em;
+	width: 85%;
+	margin-top: -3em;
+	margin-bottom: -6em;
+	text-shadow: .1em .1em 0 #2a2a2a;
 }
 
-
-section:nth-of-type(2) div img {
-	position: absolute;
-	z-index: 2;
-	top: 160%;
+@media(min-width: 800px) {
+	section:nth-of-type(1) p {
+		width: 35%;
+		margin-left: 8em;
+		padding-top: 0.5em;
+	}
 }
 
-section:nth-of-type(3) ul  {
+section:nth-of-type(1) img:nth-of-type(1) {
+	position: relative;
+	bottom: -8em;
+	margin-left: 7em;
+	width: 17.5em;
+	height: 6.7em;
+}
+
+@media(max-width: 800px) {
+	section:nth-of-type(1) img:nth-of-type(1) {
+		display: none;
+	}
+}
+
+section:nth-of-type(1) img:nth-of-type(2) {
+	position: relative;
+	bottom: -7.5em;
+	width: 23.1em;
+	height: 22.8em;
+}
+
+@media(min-width: 800px) {
+	section:nth-of-type(1) img:nth-of-type(2) {
+		margin-left: 25.2em;
+		bottom: 12em;
+	}
+}
+
+/*********************/
+/* SECTION 2 */
+/*********************/
+
+section:nth-of-type(2) {
+	background-image: url("./image/behang-patroon2.jpg");
+	background-size: 190%;
+	background-position: 112% 5%;
+}
+
+@media(min-width: 800px) {
+	section:nth-of-type(2) {
+		margin-top: -21em;
+		background-size: cover;
+	}
+}
+
+section:nth-of-type(2) img {
+	margin: 1em;
+	padding: 0.8em;
+	align-items: center;
+	margin-top: 6em;
+	margin-bottom: 3em;
+	filter: drop-shadow(.1em .8em .7em rgb(61, 61, 61));
+	width: 20.6em;
+	height: 15.9em;
+}
+
+@media(min-width:800px) {
+	section:nth-of-type(2) img {
+		width: 36em;
+		height: 27.8em;
+		margin-left: 6em;
+	}
+}
+
+/*********************/
+/* SECTION 3 */
+/*********************/
+
+section:nth-of-type(3) ul {
 	display: flex;
 	gap: 1em;
-	margin: 0;
-	padding: 0;
+	margin-top: -2em;
+	padding: 1em;
 	list-style-type: none;
 	overflow: auto;
-	scroll-snap-type:x mandatory;
+	scroll-snap-type: x mandatory;
 	scroll-behavior: smooth;
 
 }
 
+section:nth-of-type(3) li:nth-child(2) {
+	width: 89%;
+}
+
+
 section:nth-of-type(3) h2 {
 	color: #7AAA2B;
 	font-family: "Bebas Neue", sans-serif;
-	font-size: 2em;
+	font-size: 2.5em;
 	font-weight: 300;
+	margin-left: 0.3em;
+	margin-top: 1.3em;
 
 }
 
@@ -153,32 +273,67 @@ section:nth-of-type(3) h3 {
 	color: white;
 	font-family: "Bebas Neue", sans-serif;
 	font-size: 23px;
-
+	margin: 0.2em;
+	text-align: center;
+	width: 80%;
+	margin-left: 1em;
 }
 
 section:nth-of-type(3) ul::-webkit-scrollbar {
-	display: none; 
+	display: none;
 }
 
+/*********************/
+/* SECTION 4 */
+/*********************/
 
 section:nth-of-type(4) {
+	display: flex;
 	background-color: white;
 	padding: 1em;
+	align-items: center;
+	flex-direction: column;
 }
 
 section:nth-of-type(4) h2 {
 	color: #7AAA2B;
 	font-family: "Bebas Neue", sans-serif;
-	font-size: 300%;
+	font-size: 3.1em;
 	font-weight: 400;
 	text-align: center;
+	width: 85%;
+	margin-top: 0.3em;
+	gap: 1em;
+	line-height: 0.9em;
+}
+
+@media(min-width: 800px) {
+	section:nth-of-type(4) h2 {
+		font-size: 4.1em;
+	}
 }
 
 section:nth-of-type(4) p {
 	font-family: "Source Sans 3", sans-serif;
 	color: #295011;
 	text-align: center;
+	font-size: 1.1em;
+	font-weight: 400;
+	margin: 0.5em;
+	margin-top: -1em;
+	width: 85%;
 }
+
+@media(min-width: 800px) {
+	section:nth-of-type(4) p {
+		margin-top: -2em;
+		width: 91%;
+	}
+}
+
+/*********************/
+/* SECTION 5 */
+/*********************/
 
 section:nth-of-type(5) {
 	background-color: #2A5016;
@@ -196,6 +351,8 @@ section:nth-of-type(5) h3 {
 	color: white;
 	font-family: "Open Sans", sans-serif;
 	font-size: 1em;
+	width: 30%;
+
 }
 
 section:nth-of-type(5) h2 {
@@ -203,60 +360,676 @@ section:nth-of-type(5) h2 {
 	color: white;
 	font-size: 5em;
 	font-weight: 300;
+	margin-top: -0.5em;
+	width: 40%;
+	margin-left: 0.7em;
+	line-height: 0.8em;
 
+}
+
+section:nth-of-type(5) .container {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	gap: 1em;
+	margin-left: 1.5em;
+	margin-top: -3.5em;
 }
 
 section:nth-of-type(5) p {
 	font-family: "Gentium Plus", serif;
+	font-size: 1.1em;
 	color: white;
+	margin-top: -2em;
+	margin-left: 2em;
+	text-shadow: .1em .1em 0 #2a2a2a;
+	width: 80%;
 }
 
-section:nth-of-type(5) h5 {
-	color: #FFDD00;
-	font-size: 1em;
+@media (min-width:800px) {
+	section:nth-of-type(5) p {
+		width: 90%;
+		margin-left: 1.5em;
+	}
 }
 
-ection:nth-of-type(6) h4 {
+section:nth-of-type(5) a {
 	color: #FFDD00;
-	font-family: "Open Sans", sans-serif;
-	font-size: 3em;
-	margin-top: -1;
+	font-family: "Gentium Plus", serif;
+	font-size: 1.3em;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: 400;
+	margin-left: 1.8em;
+	text-shadow: .1em .1em 0 #2a2a2a;
+	margin-bottom: -1em;
+}
+
+@media (min-width:800px) {
+	section:nth-of-type(5) a {
+		margin-left: 1em;
+	}
+}
+
+
+section:nth-of-type(5) a span {
+	margin-left: 1.8em;
+}
+
+@media (min-width:800px) {
+	section:nth-of-type(5) a span {
+		margin-left: 0;
+	}
+}
+
+section:nth-of-type(5) img {
+	margin-top: 1em;
+	margin-bottom: 2em;
+	width: 18.4em;
+	height: 18em;
+	margin-left: 1em;
+}
+
+@media (min-width:800px) {
+	section:nth-of-type(5) article:nth-of-type(1) img {
+		width: 22.5em;
+		height: 20.7em;
+		margin: 0;
+	}
+}
+
+section:nth-of-type(5) article:nth-of-type(2) img {
+	margin-top: 4em;
+}
+
+@media(min-width:800px) {
+	section:nth-of-type(5) article:nth-of-type(1) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+	}
+}
+
+@media(min-width:800px) {
+	section:nth-of-type(5) article:nth-of-type(2) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+	}
+}
+
+@media(max-width:800px) {
+	section:nth-of-type(5) article:nth-of-type(2) img:nth-of-type(1) {
+		display: none;
+	}
+}
+
+@media(min-width:800px) {
+	section:nth-of-type(5) article:nth-of-type(2) img:nth-of-type(2) {
+		display: none;
+
+	}
+}
+
+
+/*********************/
+/* SECTION 6 */
+/*********************/
+
+section:nth-of-type(6) article:nth-of-type(2) {
+	background-image: url("./image/zilveruitjes2.jpg");
+	background-size: 240%;
+	background-position: 47%;
+	background-repeat: no-repeat;
+}
+
+@media (min-width: 800px) {
+	section:nth-of-type(6) article:nth-of-type(2) {
+		background-size: 120%;
+		background-position: 30%;
+	}
+}
+
+section:nth-of-type(6) h2 {
+	font-family: "Bebas Neue", sans-serif;
+	color: white;
+	font-size: 3.5em;
+	font-weight: 300;
+	margin-top: -0.6em;
+	width: 60%;
+	margin-left: 1em;
+	line-height: 0.8em;
+}
+
+@media (min-width: 800px) {
+	section:nth-of-type(6) h2 {
+		width: 30%;
+		font-size: 5em;
+		line-height: 0.8em;
+		margin-top: -0.3em;
+		margin-left: 1em;
+	}
 }
 
 section:nth-of-type(6) h3 {
 	color: white;
 	font-family: "Open Sans", sans-serif;
 	font-size: 1em;
+	margin-top: 2em;
+	width: 40%;
 }
 
-section:nth-of-type(6) h2 {
-	font-family: "Bebas Neue", sans-serif;
-	color: white;
-	font-size: 5em;
-	font-weight: 300;
+@media (min-width: 800px) {
+	section:nth-of-type(6) h3 {
+		width: 16%;
+	}
+}
 
+@media (min-width: 800px) {
+	section:nth-of-type(6) article:nth-of-type(2) h3 {
+		width: 20%;
+	}
+}
+
+section:nth-of-type(6) h4 {
+	color: #FFDD00;
+	font-family: "Open Sans", sans-serif;
+	font-size: 3em;
+	margin-top: 1.5em;
 }
 
 section:nth-of-type(6) p {
 	font-family: "Gentium Plus", serif;
 	color: white;
+	margin-left: 2em;
+	margin-top: 0.5em;
+	width: 75%;
+	text-shadow: .1em .1em 0 #2a2a2a;
+
 }
 
-section:nth-of-type(6) h5 {
+@media (min-width: 800px) {
+	section:nth-of-type(6) p {
+		width: 92%;
+		font-size: 1.1em;
+		margin-left: 3em;
+	}
+}
+
+section:nth-of-type(6) a {
 	color: #FFDD00;
-	font-size: 1em;
+	font-family: "Gentium Plus", serif;
+	font-size: 1.3em;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: 400;
+	margin-left: 1.3em;
+	text-shadow: .1em .1em 0 #2a2a2a;
+	padding-top: -1em;
+
 }
 
-section:nth-of-type(6) article div {
-	position: absolute;
-	z-index: 1;
-	top: 860%;
-	text-align: left;
+@media (min-width: 800px) {
+	section:nth-of-type(6) a {
+		margin-left: 2.4em;
+
+	}
 }
+
+section:nth-of-type(6) a span {
+	margin-left: 1.3em;
+}
+
+@media (min-width: 800px) {
+	section:nth-of-type(6) a span {
+		margin: 0;
+
+	}
+}
+
+section:nth-of-type(6) img {
+	margin-top: 2em;
+	width: 16.9em;
+	height: 15.3em;
+	margin-left: 3em;
+}
+
+
+@media (min-width:800px) {
+	section:nth-of-type(6) img {
+		margin-top: 3em;
+		margin-left: 10em;
+		width: 30em;
+		height: 25em;
+
+	}
+}
+
+section:nth-of-type(6) .container {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	gap: 1em;
+	margin-left: 2em;
+	margin-top: -3.5em;
+}
+
+@media (min-width: 800px) {
+	section:nth-of-type(6) .container {
+		margin-left: 3em;
+	}
+}
+
+section:nth-of-type(6) article:nth-of-type(2) h2 {
+	font-size: 5em;
+	margin-bottom: 0.3em;
+	margin-left: 0.8em;
+}
+
+
+/*********************/
+/* SECTION 7 */
+/*********************/
 
 section:nth-of-type(7) {
 	background-color: #295011;
 	padding: 1em;
 }
 
+section:nth-of-type(7) h4 {
+	color: #FFDD00;
+	font-family: "Open Sans", sans-serif;
+	font-size: 3em;
+	margin-top: 1.5em;
+}
 
+section:nth-of-type(7) h3 {
+	color: white;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	margin-top: 2em;
+	width: 40%;
+}
+
+section:nth-of-type(7) .container {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	gap: 1em;
+	margin-left: 1.5em;
+	margin-top: -3.5em;
+}
+
+section:nth-of-type(7) h2 {
+	font-family: "Bebas Neue", sans-serif;
+	color: white;
+	font-size: 5em;
+	font-weight: 300;
+	margin-top: -0.5em;
+	margin-left: 0.7em;
+	line-height: 0.8em;
+}
+
+section:nth-of-type(7) article:nth-of-type(3) h2 {
+	width: 60%;
+
+}
+
+
+section:nth-of-type(7) article:nth-of-type(2) h2 {
+	width: 50%;
+}
+
+section:nth-of-type(7) p {
+	font-family: "Gentium Plus", serif;
+	color: white;
+	margin-top: -2.5em;
+	text-shadow: .1em .1em 0 #2a2a2a;
+	margin-left: 1.5em;
+	width: 80%;
+}
+
+section:nth-of-type(7) a {
+	color: #FFDD00;
+	font-family: "Gentium Plus", serif;
+	font-size: 1.3em;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: 400;
+	margin-left: 1.3em;
+	text-shadow: .1em .1em 0 #2a2a2a;
+}
+
+@media(min-width:800px) {
+	section:nth-of-type(7) a {
+		margin-left: -0.1em;
+	}
+}
+
+section:nth-of-type(7) a span {
+	margin-left: 1.2em;
+}
+
+@media(min-width:800px) {
+	section:nth-of-type(7) a span {
+		margin: 0;
+	}
+}
+
+section:nth-of-type(7) img {
+	margin-top: 1em;
+	margin-left: 1em;
+	width: 18.4em;
+	height: 18.1em;
+}
+
+section:nth-of-type(7) article:nth-of-type(1) img {
+	margin-top: 3em;
+	margin-left: 1em;
+}
+
+@media(min-width:800px) {
+	section:nth-of-type(7) article:nth-of-type(1) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+	}
+}
+
+@media(min-width:800px) {
+	section:nth-of-type(7) article:nth-of-type(2) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+
+	}
+}
+
+@media(min-width:800px) {
+	section:nth-of-type(7) article:nth-of-type(3) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		padding: 2em;
+	}
+}
+
+
+/*********************/
+/* SECTION 8 */
+/*********************/
+
+section:nth-of-type(8) {
+	background-image: url(./image/familie.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	background-color: #212121;
+	margin-top: 8em;
+}
+
+section:nth-of-type(8) h4 {
+	color: #FFDD00;
+	font-family: "Open Sans", sans-serif;
+	font-size: 3em;
+	margin-top: 0.3em;
+}
+
+section:nth-of-type(8) h3 {
+	color: white;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1em;
+	margin-top: -3em;
+}
+
+section:nth-of-type(8) .container {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	gap: 1em;
+	margin-left: 1em;
+	margin-top: -3.5em;
+	padding-left: 1.5em;
+}
+
+@media (min-width: 800px) {
+	section:nth-of-type(8) .container {
+		justify-content: right;
+		margin-right: 10em;
+	}
+}
+
+section:nth-of-type(8) h2 {
+	font-family: "Bebas Neue", sans-serif;
+	color: white;
+	font-size: 3.2em;
+	font-weight: 300;
+	margin-top: -0.9em;
+	margin-left: 1.3em;
+	width: 60%;
+}
+
+@media(min-width: 800px) {
+	section:nth-of-type(8) h2 {
+		width: 40%;
+		font-size: 4em;
+		margin-left: 7em;
+		line-height: 0.8em;
+	}
+}
+
+section:nth-of-type(8) h2 span {
+	color: #FFDD00;
+}
+
+section:nth-of-type(8) h5 {
+	color: #7AAA2B;
+	font-family: "Gentium Plus", serif;
+	font-size: 1.3em;
+	font-style: italic;
+	padding-bottom: 10em;
+	font-weight: 400;
+	margin-left: 2em;
+
+}
+
+@media(min-width: 800px) {
+	section:nth-of-type(8) h5 {
+		padding-bottom: 4em;
+		margin-left: 20em;
+	}
+}
+
+
+/*********************/
+/* SECTION 9 */
+/*********************/
+
+
+
+section:nth-of-type(9) {
+	background-color: #2A4F16;
+	margin: 1.3em;
+	margin-top: 7em;
+}
+
+section:nth-of-type(9) img {
+	margin-left: 2em;
+	width: 18.1em;
+	height: 18.5em;
+}
+
+section:nth-of-type(9) h3 {
+	font-family: "Bebas Neue", sans-serif;
+	color: white;
+	font-size: 2.2em;
+	font-weight: 300;
+	text-align: center;
+	padding-top: 1em;
+}
+
+section:nth-of-type(9) p {
+	color: #7AAA2B;
+	font-family: "Gentium Plus", serif;
+	text-align: center;
+	font-style: italic;
+	font-size: 1.2em;
+	width: 90%;
+	padding-left: 1.5em;
+}
+
+section:nth-of-type(9) h4 {
+	font-family: "Satisfy", cursive;
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+	width: 90%;
+	padding-bottom: 2em;
+	padding-left: 0.7em;
+	margin-top: -1em;
+}
+
+/*********************/
+/* SECTION 10 */
+/*********************/
+
+section:nth-of-type(10) h2 {
+	color: #7AAA2B;
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 2.5em;
+	font-weight: 400;
+	padding-left: 0.3em;
+}
+
+audio {
+	display: block;
+	width: 88%;
+	max-width: 800px;
+	margin: 20px auto;
+	padding-left: 0.5em;
+}
+
+audio::-webkit-media-controls-panel {
+	background-color: #565656;
+}
+
+audio::-webkit-media-controls-current-time-display {
+	color: white;
+}
+
+audio::-webkit-media-controls-time-remaining-display {
+	color: white;
+}
+
+/*********************/
+/* SECTION 11 */
+/*********************/
+
+@media(min-width:800px) {
+	main section:last-of-type {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		/* twee kolommen */
+		gap: 2rem;
+		/* ruimte tussen de artikelen */
+		align-items: start;
+	}
+}
+
+
+section:nth-of-type(11) {
+	background-color: #0F351A;
+	margin: 0.9em;
+	padding-bottom: 0.8em;
+}
+
+section:nth-of-type(11) h2 {
+	font-family: "Bebas Neue", sans-serif;
+	color: white;
+	text-align: center;
+	padding-top: 1em;
+	font-size: 2.9em;
+	font-weight: 300;
+	padding-right: 1em;
+}
+
+section:nth-of-type(11) img {
+	margin: 3.5em;
+	margin-top: -1em;
+	padding: -1em;
+	width: 15.6em;
+	height: 10.4em;
+}
+
+section:nth-of-type(11) article:nth-of-type(1) h3 {
+	color: white;
+	font-family: "Gentium Plus", serif;
+	font-weight: 300;
+	padding-left: 2.3em;
+	margin-top: -2em;
+	font-size: 1.5em;
+	width: 80%;
+}
+
+
+section:nth-of-type(11) p {
+	color: white;
+	font-family: "Gentium Plus", serif;
+	font-weight: 300;
+	padding-left: 2.8em;
+	margin-top: -0.4em;
+	font-size: 1.2em;
+	width: 80%;
+}
+
+section:nth-of-type(11) h4 {
+	color: #FFDD00;
+	font-family: "Gentium Plus", serif;
+	font-size: 1.4em;
+	font-style: italic;
+	padding-left: 2.3em;
+	margin-top: 1em;
+}
+
+section:nth-of-type(11) article:nth-of-type(1) h3 {
+	width: 65%;
+}
+
+section:nth-of-type(11) article:nth-of-type(2) h3 {
+	color: white;
+	font-family: "Gentium Plus", serif;
+	font-weight: 300;
+	padding-left: 2.3em;
+	margin-top: 2.5em;
+	font-size: 1.5em;
+	width: 80%;
+}
+
+section:nth-of-type(11) h5 {
+	color: #7AAA2B;
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 3em;
+	font-weight: 300;
+	text-align: right;
+	margin-right: 1em;
+	font-style: none;
+}
+
+section:nth-of-type(11) h6 {
+	color: #7AAA2B;
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 3em;
+	font-weight: 300;
+	text-align: right;
+	padding-right: 0.8em;
+	margin-top: -1.5em;
+}
+
+section:nth-of-type(11) a {
+	color: #FFDD00;
+	font-family: "Gentium Plus", serif;
+	font-size: 1.3em;
+	text-decoration: none;
+	font-style: italic;
+	font-weight: 400;
+	margin-left: 2.5em;
+	text-shadow: .1em .1em 0 #2a2a2a;
+}
