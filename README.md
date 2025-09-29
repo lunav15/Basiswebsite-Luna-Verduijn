@@ -117,15 +117,18 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  De plaatjes naast elkaar zetten is niet gelukt met behulp van grid of flexbox.
+Het maken van de animatie met Javascript voor mijn H1/H2 tekst en img.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatjes
+  De plaatjes naast elkaar zetten is niet gelukt met behulp van grid of flexbox.
 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="bummer">
+  <img src="readme-images/Gridnietgelukt.png" width="375px" alt="bummer">
+  <img src="readme-images/Gridjuistemanier.png" width="375px" alt="bummer">
+
+  Ook de pijltjes voor de carousel is niet gelukt.
+<img src="readme-images/Carouselnietgelukt.png" width="375px" alt="bummer">
 </details>
 
 
