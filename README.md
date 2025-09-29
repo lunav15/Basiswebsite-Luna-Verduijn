@@ -56,7 +56,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  - Er wordt veel gebruik gemaakt van classes.
+  - De html is niet semantisch correct.
+  - Bij het onderdeel "Headings" is op alles "nee" geantwoord.
+  - Niet alle img hebben een alt.
+  - Er wordt geen gebruikt gemaakt van list elementen.
+  - Er wordt geen a gebruikt voor links.
+  - Het button element wordt niet gebruikt voor knoppen.
+    
 
 </details>
 
@@ -70,7 +77,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### de hele pagina: 
   <img src="readme-images/breakdown-volledig.png" width="375px" alt="breakdown van de hele pagina">
 
-  ### dynamisch deel (bijv menu): 
+  ### dynamisch budeel (bijv menu): 
   <img src="readme-images/breakdown-menu.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
@@ -79,123 +86,22 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 </details>
 
 
-
-
-
-## Voortgang 1 (week 2)
-
-<details>
-  <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
-
-  ### Stand van zaken
-  - Onderscheidt tussen section en article.
-
-
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-
-  ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-- Hashtag staat op zichelf bij H3.
-- Classes weg en tijden CSS pas toevoegen waar nodig.
-- Er is maar één h1 per pagina, derest veranderen naar h2.
-- Zo min mogelijk classes en div.
-- Geen nav bij de foot.
-</details>
-
-
-
-
-
-## Voortgang 2 (week 3)
-
-<details>
-  <summary>uitwerken voor 2<sup>e</sup> voortgang</summary>
-
-  ### Stand van zaken
-  Lastig:
-  - Een begin maken.
-  - Carousel maken.
-  - Tekst overlappen op images.
-  - Alles op de juiste positie zetten.
-  - Gebruik maken van grid.
-
-
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-
-  ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-- ...
-
-</details>
-
-
-
-
-
 ## Toegankelijkheidstest 2/2 (week 4)
 
 <details>
   <summary>uitwerken na test in 9<sup>e</sup> werkgroep</summary>
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen (geef ook aan wat er verbeterd is):
+  Verbeterd:
+  - Elke img een alt geven.
+  - Een button element gebruiken voor knoppen.
+  - Het a element gebruiken voor links.
+  - List elements gebruikt bijvoorbeeld voor in het navigatiemenu.
+  - De heading element correct gebruikt.
+    Bevinding:
+  - Wat mij opviel is dat als ik de "voice over" aanzet in mijn instellingen en ik naar mijn website ga dat de computer mij goed door de pagina heen kan navigeren.
 
 </details>
-
-
-
-
-
-## Voortgang 3 (week 4)
-
-<details>
-  <summary>uitwerken voor 3<sup>e</sup> voortgang</summary>
-
-  ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
-
-
-  ### Agenda voor meeting
-  samen met je groepje opstellen
-
-  | student 1      | student 2          | student 3    | student 4        |
-  | ---            | ---                | ---          | ---              |
-  | dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-  | en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-  | ...            | ...                | ...          | ...              |
-
-
-  ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
-
-</details>
-
 
 
 
@@ -210,7 +116,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatjes
+  De plaatjes naast elkaar zetten is niet gelukt met behulp van grid of flexbox.
 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="top">
 
@@ -234,8 +140,15 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Nb. ChatGpT en andere AI horen er ook bij.
   Nb. Vermeld de bronnen ook in je code.
 
-  1. bron 1
-  2. bron 2
-  3. ...
+  1. [CodePen grid](https://codepen.io/shooft/pen/KwdZPMP)
+  2. [CodePen Intersection observer, maken van animatie](https://codepen.io/Nienke-the-styleful/pen/zYgYomN)
+  3. [ChatGPT](https://chatgpt.com/?model=auto)
+  4. [CSS-tricks Text-shadow](https://css-tricks.com/almanac/properties/t/text-shadow/)
+  5. [CSS-tricks flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+  6. [CSS-tricks details/summary](https://css-tricks.com/using-styling-the-details-element/)
+  7. [W3Schools dropdown navigatie menu met java](https://www.w3schools.com/howto/howto_js_dropdown.asp)
+  8. [Mdn position absolute](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+  9. [CSS-tricks responsive maken](https://css-tricks.com/almanac/rules/m/media/)
+  10.[DLO]
 
 </details>
